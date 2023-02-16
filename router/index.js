@@ -5,9 +5,15 @@ const messageController = require('../controllers/message.controller');
 const router = require('express').Router();
 
 // Configuration des routes possibles
+// Lien vers la home page
 router.get('/', homeController.getHome);
-router.get('/messages', messageController.getMessage);
-router.post('/messages', messageController.postMessage);
+// Lien vers la liste de tous les messages
+router.get('/message', messageController.getMessages);
+// Lien vers le formulaire pour add un message
+router.get('/message/add', messageController.getForm);
+// Post du formulaire
+router.post('/message/add', messageController.postMessage);
+
 
 // Export du router
 module.exports = router;
