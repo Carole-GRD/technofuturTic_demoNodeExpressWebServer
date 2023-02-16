@@ -18,6 +18,12 @@ app.set('views', 'views');
 // ↑ Pour indiquer le dossier dans lequel les vues doivent être cherchées.
 
 
+// Gestion des dossiers statiques
+// Pour rendre accessible le dossier public et faire en sorte que les images, les fichiers css etc soient gérés
+app.use(express.static('public'));
+
+
+
 // Configuration de l'app, pour qu'elle utilise le router
 const router = require('./router');
 app.use(router);
