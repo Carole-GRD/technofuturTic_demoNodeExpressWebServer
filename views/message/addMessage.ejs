@@ -3,9 +3,23 @@
 <main>
     <h1>Ajouter un nouveau message : ✉</h1>
     <form method="post">
+        <div>
+            <label for="pseudo">Pseudo ou Prénom</label>
+            <input id="pseudo" name="pseudo" type="text">
+        </div>
+        <div>
+            <label for="title">Titre du message : </label>
+            <input id="title" name="title" type="text">
+        </div>
         
+        <div>
+            <label for="msg">Votre message :</label>
+            <textarea name="msg" id="msg"></textarea>
+        </div>
+
 
         <a href="/message">Annuler</a>
+        <input type="submit" value="Ajouter">
     </form>
 </main>
 
