@@ -1,0 +1,13 @@
+Voir captures d'écran dans Notion -> Node JS
+
+> Ouvrir SQL Server Configuration Manager
+> SQL Server Network Configuration
+    > Protocole
+        -> Activer TCP/IP
+        -> Dans les paramètres aller sur onglet IP Adress > IPAll > TCP PORT -> 1433
+
+> SQL Naive Client (32 bits et 'rien' (64 bits))
+    > Client Protocols -> Activer TCP/IP
+
+> SQL Service
+    > SQL Server (...) -> Restart

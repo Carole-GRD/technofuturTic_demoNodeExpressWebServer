@@ -22,8 +22,11 @@ const sequelize = new Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
 const db = {}
 
 
-// Liaison des models à db
+// Ajout de l'instance de sequelize dans db
+db.sequelize = sequelize;
 
+// Liaison des models à db
+db.Message = require('./message.model')(sequelize)
 
 // S'il y a, on setup (mise en place) aussi, toutes les relations
 
