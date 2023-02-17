@@ -27,6 +27,7 @@ db.sequelize = sequelize;
 
 // Liaison des models à db
 db.Message = require('./message.model')(sequelize)
+db.Contact = require('./contact.model')(sequelize)
 
 // S'il y a, on setup (mise en place) aussi, toutes les relations
 

@@ -1,0 +1,32 @@
+<%- include('../shared/header') %>
+
+<main>
+    <h1>Ajouter un nouveau contact : 😊</h1>
+    <form method="post">
+        <div>
+            <label for="lastName">Nom :</label>
+            <input id="lastName" name="lastName" type="text">
+        </div>
+        <div>
+            <label for="firstName">Prénom :</label>
+            <input id="firstName" name="firstName" type="text">
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input id="email" name="email" type="text">
+        </div>
+        <div>
+            <label for="phone">Tel :</label>
+            <input id="phone" name="phone" type="text">
+        </div>
+        <div>
+            <input id="favori" name="favori" type="checkbox">
+            <label for="favori">Favori ?</label>
+        </div>
+
+        <a href="/contact">Annuler</a>
+        <input type="submit" value="Ajouter">
+    </form>
+</main>
+
+<%- include('../shared/footer') %>

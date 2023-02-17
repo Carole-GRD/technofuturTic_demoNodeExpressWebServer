@@ -1,3 +1,4 @@
+const contactController = require('../controllers/contact.controller');
 const homeController = require('../controllers/home.controller');
 const messageController = require('../controllers/message.controller');
 
@@ -13,6 +14,13 @@ router.get('/message', messageController.getMessages);
 router.get('/message/add', messageController.getForm);
 // Post du formulaire
 router.post('/message/add', messageController.postMessage);
+
+
+
+router.get('/contact', contactController.getContacts);
+router.get('/contact/add', contactController.getForm);
+router.post('/contact/add', contactController.postContact);
+
 
 
 // Export du router
