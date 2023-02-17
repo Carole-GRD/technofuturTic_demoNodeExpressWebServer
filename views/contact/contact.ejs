@@ -6,25 +6,26 @@
     <!-- <div>Todo : Afficher la liste</div> -->
     
     <% for (const contact of contacts) { %>
-        <div class="card">
+        <div class="card contact-card">
             <div>
-                <p>Nom : <%= contact.lastName %></p>
-                <p>Prénom : <%= contact.firstName %></p>
-                <p>Email : <%= contact.email %></p>
-                <p>Tel : <%= contact.phone %></p>
+                <p class="font-fam"><span>Nom : </span> <%= contact.lastName %></p>
+                <p class="font-fam"><span>Prénom : </span> <%= contact.firstName %></p>
+                <p class="font-fam"><span>Email : </span> <%= contact.email %></p>
+                <p class="font-fam"><span>Tel : </span> <%= contact.phone %></p>
             </div>
         
             <% if (contact.favori) { %>
                 <div>
-                    <p>⭐</p>
-                    <!-- <img src="../../public/images/etoile.png" alt="Image d'étoile"> -->
+                    <!-- <p>⭐</p> -->
+                    <img src="/images/star.png" alt="Image d'étoile">
                 </div>
             <% } %>
         </div>        
     <% } %>
     
-    
-    <a href="/contact/add">Ajouter un contact</a>
+    <div class="add">
+        <a href="/contact/add">Ajouter un contact</a>
+    </div>
 </main>
 
 <%- include('../shared/footer') %>

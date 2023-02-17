@@ -5,7 +5,7 @@
     <h1>Voici la liste des messages : ✉</h1>
     <!-- <div>Todo : Afficher la liste</div> -->
     <% for (const message of messages) { %>
-        <div class="card">
+        <div class="card message-card">
             <h2 class="<%= message.urgent ? 'urgent' : '' %>">
                 <%= message.title %>
             </h2>
@@ -13,7 +13,9 @@
             <p><%= message.author %></p>
         </div>
     <% } %>
-    <a href="/message/add">Ajouter un message</a>
+    <div class="add">
+        <a href="/message/add">Ajouter un message</a>
+    </div>
 </main>
 
 <%- include('../shared/footer') %>

@@ -13,9 +13,9 @@ db.sequelize.authenticate()
     .catch((err) => console.log('Connection to DB failed', err))
 // Synchronisation
 if (process.env.NODE_ENV === 'development'){
-    db.sequelize.sync({ force : true });
+    // db.sequelize.sync({ force : true });
     // ↑ Créer les tables, si existent déjà, les supprime et les refait
-    // db.sequelize.sync({ alter : { drop : false } });
+    db.sequelize.sync({ alter : { drop : false } });
     // ↑ Autorise la modification des tables/columns mais n'autorise pas la suppression des tables/columns
 }
 

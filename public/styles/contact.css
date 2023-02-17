@@ -1,0 +1,14 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
+
+span {
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 600;
+}
+
+.contact-card img {
+    width: 50px;
+}

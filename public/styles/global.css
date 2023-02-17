@@ -1,12 +1,138 @@
-.txt-slate {
-    color: darkslategray;
+
+
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+nav {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #3c4048;
+
+
 }
 
-.urgent {
-    color: darkred;
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+nav li {
+    width: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    list-style-type: none;  
+    color: #eaeaea;
+    letter-spacing: .1rem;
+}
+nav li:hover {
+    color: #00ABB3;
+    color: #daa520;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main{
+    position: relative;
+    top: 10vh;
+    bottom: 20vh;
+    padding: 10%;
+    background-color: #eaeaea;
+    color: #3c4048;
+}
+
+h1 {
+    margin-bottom: 5%;
+}
+
+
 
 .card {
-    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 3%; 
+    padding: 5%;
+    width: 60vw;
+    /* border: 1px solid black; */
     border-radius: 5px;
+    background-color: #00aab363;
+    background-color: #3c404822;
 }
+.card p {
+    margin-bottom: 3%;
+}
+
+img {
+    width: 50vw;
+}
+
+div.add {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px 3%;
+    padding: 10px 20px;
+    width: 50vw;
+    background-color: #daa520;
+    border-radius: 5px;
+    text-align: center;
+}
+.add a {
+    font-weight: 600;
+    color: #3c4048;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c4048;
+    color: #eaeaea;
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .card {
+      width: 50vw;
+    }
+  }
+@media screen and (min-width: 1024px) {
+    .card {
+      width: 40vw;
+    }
+  }
