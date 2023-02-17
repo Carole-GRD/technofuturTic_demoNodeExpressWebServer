@@ -3,6 +3,23 @@ require('dotenv').config();
 
 // Import d'express
 const express = require('express');
+
+// Connection à la db et synchronisation
+// Import de la db 
+const db = require('./models');
+// Connection
+db.sequelize.authenticate()
+    .then(() => console.log('Connection to DB success'))
+    .catch((err) => console.log('Connection to DB failed'))
+// Synchronisation
+if (process.env.NODE_ENV === 'development'){
+    // db.sequelize.sync({ force : true });
+    // ↑ Créer les tables, si existent déjà, les supprime et les refait
+    db.sequelize.sync({ alter : { drop : false } });
+    // ↑ Autorise la modification des tables/columns mais n'autorise pas la suppression des tables/columns
+}
+
+
 // Création d'un serveur
 const app = express();
 

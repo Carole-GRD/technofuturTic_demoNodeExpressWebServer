@@ -36,9 +36,12 @@ module.exports = (sequelize) => {
         tableName : 'Message',  
         // ↑ Pour indiquer le nom de la table qu'il doit créer à la fin de la synchronisation, sinon, par défaut, il prend le nom du Model, avec un s à la fin
 
+        // ------------------------------
         // createdAt: 'Date de création',   
         // timestamps: true,
-        // updatedAt: 'updateTimestamp'
+        // updatedAt: 'Update'
+        // ------------------------------
+        // ↑ déjà par défaut 
     })
 
     return Message;

@@ -1,5 +1,5 @@
 // Fichier de paramétrage Sequelize
-
+// ---------------------------------
 
 // Import de Sequelize
 const { Sequelize, DataTypes } = require('sequelize');
@@ -7,7 +7,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 // Récupération des variables d'env
 const { DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_SERVER } = process.env;
-
+console.log(DB_PASSWORD);
 
 // Initialisation de l'objet Sequelize
 // https://sequelize.org/docs/v6/getting-started/
