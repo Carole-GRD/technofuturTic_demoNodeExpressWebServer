@@ -10,7 +10,7 @@ const db = require('./models');
 // Connection
 db.sequelize.authenticate()
     .then(() => console.log('Connection to DB success'))
-    .catch((err) => console.log('Connection to DB failed'))
+    .catch((err) => console.log('Connection to DB failed', err))
 // Synchronisation
 if (process.env.NODE_ENV === 'development'){
     // db.sequelize.sync({ force : true });
@@ -23,6 +23,12 @@ if (process.env.NODE_ENV === 'development'){
 // Création d'un serveur
 const app = express();
 
+// Middleware application lvl
+// Logger (Morgan)
+const morgan = require('morgan');
+app.use(morgan('tiny'));
+// Gestion des données POST  des formulaires
+app.use(express.urlencoded({ extended : true }));
 
 // Congiguration du moteur de vues 
 // nous utilisons ejs mais il y en a d'autres (pug, mustache,...)

@@ -3,7 +3,16 @@
 
 <main>
     <h1>Voici la liste des messages : ✉</h1>
-    <div>Todo : Afficher la liste</div>
+    <!-- <div>Todo : Afficher la liste</div> -->
+    <% for (const message of messages) { %>
+        <div class="card">
+            <h2 class="<%= message.urgent ? 'urgent' : '' %>">
+                <%= message.title %>
+            </h2>
+            <p><%= message.msg %></p>
+            <p><%= message.author %></p>
+        </div>
+    <% } %>
     <a href="/message/add">Ajouter un message</a>
 </main>
 
