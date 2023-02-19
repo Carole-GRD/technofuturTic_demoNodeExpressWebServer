@@ -45,6 +45,7 @@ nav li {
 nav li:hover {
     color: #00ABB3;
     color: #daa520;
+
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -61,6 +62,7 @@ main{
     top: 10vh;
     bottom: 20vh;
     padding: 10%;
+    min-height: 80vh;
     background-color: #eaeaea;
     color: #3c4048;
 }
@@ -74,14 +76,14 @@ h1 {
 .card {
     display: flex;
     justify-content: space-between;
-    margin: 3%; 
+    margin: 4%; 
     padding: 5%;
     width: 60vw;
-    /* border: 1px solid black; */
     border-radius: 5px;
-    background-color: #00aab363;
-    background-color: #3c404822;
+    background-color: #fafafa;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
+
 .card p {
     margin-bottom: 3%;
 }
@@ -90,24 +92,82 @@ img {
     width: 50vw;
 }
 
-div.add {
+
+
+/* La classe "add" correspond aux boutons 
+   pour naviguer vers le fomrulaire : 
+    - ajouter un message
+    - ajouter un contact
+ */
+.add {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin: 30px 3%;
     padding: 10px 20px;
     width: 50vw;
-    background-color: #daa520;
+    background-color: #3c4048;
     border-radius: 5px;
     text-align: center;
 }
+.add:hover {
+    background-color: darkgoldenrod;
+}
 .add a {
     font-weight: 600;
-    color: #3c4048;
+    color: #eaeaea;
     letter-spacing: .1rem;
     text-decoration: none;
-    
 }
+
+
+/* Formulaire */
+input:not(input[type='submit']) {
+    height: 2em;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Lien pour ajouter un nouveau message ou contact */
+input[type='submit'] {
+    background-color: #3c4048;
+    color : #eaeaea;
+    margin: 30px 3%;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+input[type='submit']:hover {
+    background-color: darkgoldenrod;
+}
+
+
+/* Annuler l'ajout */
+.button-secondary {
+    color : #3c4048;
+    padding: 0.5em 0 ;
+    margin : 0.5em 1em;
+    text-decoration: none;
+    border-bottom: 1px solid darkgoldenrod;
+}
+.button-secondary:hover {
+    color : darkgoldenrod;
+    border-bottom: 1px solid #3c4048;
+}
+
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+}
+.checkbox-group input {
+    height: 1rem;
+    width: 1rem;
+    margin-right: .5rem;
+}
+
 
 
 footer {

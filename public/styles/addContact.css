@@ -1,0 +1,23 @@
+form {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+input {
+    border: none;
+
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #3c4048;
+}
+
+
