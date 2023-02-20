@@ -13,11 +13,13 @@
                 <p class="font-fam"><span>Email : </span> <%= contact.email %></p>
                 <p class="font-fam"><span>Tel : </span> <%= contact.phone %></p>
             </div>
-        
+            
+            <!-- <div> <%= contact.favori ? '⭐' : '' %></div> -->
+            <!-- OU -->
             <% if (contact.favori) { %>
                 <div>
                     <!-- <p>⭐</p> -->
-                    <img src="/images/star.png" alt="Image d'étoile">
+                    <img src="/images/star.png" alt="Image d'étoile" >
                 </div>
             <% } %>
         </div>        

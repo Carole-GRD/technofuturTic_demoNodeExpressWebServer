@@ -43,6 +43,7 @@ const contactController = {
             // res.sendStatus(201);
             const data = {
                 ...req.body,
+                // favori : req.body.favori === 'on' ? true : false
                 favori : req.body.favori ? true : false
             }
             console.log(data);

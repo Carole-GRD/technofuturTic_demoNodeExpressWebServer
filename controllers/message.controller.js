@@ -40,7 +40,7 @@ const messageController = {
             // await db.Message.create(req.body);
             const data = {
                 ...req.body,
-                urgent : req.body.urgent ? true : false
+                urgent : req.body.urgent === 'on' ? true : false
             }
             console.log(data);
             await db.Message.create(data);
